@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:tl="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL-XMI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI-XMI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC-XMI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI-XMI" xmlns:imixs="http://www.imixs.org/bpmn2" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.1.1.201501282123" targetNamespace="http://www.imixs.org/bpmn2">
+  <bpmn2:process id="process_1" name="Default Process">
+    <bpmn2:startEvent id="StartEvent_1" name="Start Event 1">
+      <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" name="Sequence Flow 1" sourceRef="StartEvent_1" targetRef="EndEvent_1"/>
+    <bpmn2:endEvent id="EndEvent_1" name="End Event 1">
+      <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:task id="Task_1" imixs:type="TestTask" name="Task 1">
+      <bpmn2:extensionElements>
+        <imixs:taskConfig xsi:type="imixs:TaskConfig">
+          <imixs:parameter xsi:type="imixs:Parameter" name="field_personne_contact_bool" value="true"/>
+          <imixs:parameter xsi:type="imixs:Parameter" name="field_langue_du_mod_le" value="FR"/>
+          <imixs:parameter xsi:type="imixs:Parameter" name="title" value="MyProcess2"/>
+          <imixs:parameter xsi:type="imixs:Parameter" name="field_landkarte" value="10813"/>
+        </imixs:taskConfig>
+      </bpmn2:extensionElements>
+    </bpmn2:task>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Process Diagram">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process_1">
+      <bpmndi:BPMNShape id="BPMNShape_1" bpmnElement="StartEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="100.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_1">
+          <dc:Bounds height="15.0" width="68.0" x="84.0" y="136.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_2" bpmnElement="EndEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="500.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_3">
+          <dc:Bounds height="15.0" width="65.0" x="486.0" y="136.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_1" bpmnElement="Task_1">
+        <dc:Bounds height="50.0" width="110.0" x="295.0" y="295.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4">
+          <dc:Bounds height="15.0" width="37.0" x="331.0" y="312.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="BPMNShape_1" targetElement="BPMNShape_2">
+        <di:waypoint xsi:type="dc:Point" x="136.0" y="118.0"/>
+        <di:waypoint xsi:type="dc:Point" x="500.0" y="118.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_2">
+          <dc:Bounds height="30.0" width="59.0" x="289.0" y="119.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
